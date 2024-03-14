@@ -5,16 +5,16 @@
 using namespace std;
 #include<iostream>
 int main(){
-    Human human("Khanh");
+    Human human("Barry Tran");
     Computer comp;
     cout<<comp.getName();
     cout<<human.getName();
     Referee ref;
     Player* winner = ref.refGame(&human,&comp);
     if (winner == nullptr) {
-        cout << "It's a Tie." << endl;
+        cout << "The game ends in a Tie." << endl;
     } else {
-        cout << winner->getName() << " Wins." << endl;
+        cout << "Congratulations! Player " << winner->getName() << " Wins." << endl;
     }
     return 0;
 }

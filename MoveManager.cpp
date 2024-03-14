@@ -14,8 +14,8 @@ MoveManager::MoveManager(){
 
 Move* MoveManager::selectMove(std::string selection){
     while(moveList.find(selection)==moveList.end()){
-        std::cout<<"Bad Choice"<<std::endl;
-        std::cout<<"Enter Valide Move: "<<std::endl;
+        std::cout<<"Bad choice"<<std::endl;
+        std::cout<<"Enter a valid move: "<<std::endl;
         std::cin>>selection;
     }
     return moveList[selection];
