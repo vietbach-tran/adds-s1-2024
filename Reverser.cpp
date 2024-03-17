@@ -17,6 +17,8 @@ int numDigits(int n)
 
 int Reverser::reverseDigit(int value)
 {
+  if (value < 0)
+    return -1;
   if (numDigits(value) == 1)
     return value;
   int firstDigit = value;
@@ -30,7 +32,9 @@ int Reverser::reverseDigit(int value)
 
 std::string Reverser::reverseString(std::string characters)
 {
-  if (characters.length() <= 1)
+  if (characters.length() == 0)
+    return "ERROR";
+  if (characters.length() == 1)
   {
     return characters;
   }
